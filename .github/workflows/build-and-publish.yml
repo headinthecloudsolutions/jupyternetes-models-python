@@ -37,7 +37,7 @@ jobs:
         useConfigFile: true
 
     - name: Set Version 
-      run: echo "__version__ = \"${{ steps.gitversion.outputs.semVer }}\" > ./jupyternetes_models/_version.py
+      run: echo "__version__ = \"${{ steps.gitversion.outputs.semVer }}\"" > ./jupyternetes_models/_version.py
 
     - name: Build a binary wheel and a source tarball
       run: python3 -m build
